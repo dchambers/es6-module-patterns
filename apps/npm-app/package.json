@@ -1,0 +1,34 @@
+{
+  "name": "npm-app",
+  "version": "0.0.0",
+  "description": "An NPM App.",
+  "author": "Dominic Chambers",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "npm run build:module",
+    "test": "npm run test:lint && npm run test:node && npm run test:browser",
+    "build:module": "mkdirp dist && browserify src/app.js -t babelify -o dist/app.js",
+    "test:lint": "eslint src test",
+    "test:node": "mocha --compilers js:babel/register jsdom.js test",
+    "test:browser": "karma start"
+  },
+  "dependencies": {
+		"es5-module": "file:../../modules/es5-module",
+    "es6-module": "file:../../modules/es6-module"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "eslint": "^0.23.0",
+    "jsdom": "^3.1.2",
+    "karma": "^0.12.37",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-cli": "0.0.4",
+    "karma-mocha": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.2.5"
+  }
+}

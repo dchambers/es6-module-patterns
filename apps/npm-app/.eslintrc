@@ -1,0 +1,13 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"mocha": true
+	},
+	"rules": {
+		"quotes": [2, "single"]
+	},
+	"ecmaFeatures": {
+		"modules": true
+	}
+}
