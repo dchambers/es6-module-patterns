@@ -8,15 +8,16 @@
   "scripts": {
     "prepublish": "npm run build:module",
     "test": "npm run test:lint && npm run test:node && npm run test:browser",
-    "build:module": "mkdirp dist && browserify src/module.js -s es5module -o dist/es5-module-standalone.js",
+    "build:module": "mkdirp dist && jspm bundle-sfx src/module dist/es5-module-standalone.js",
     "test:lint": "eslint src test",
     "test:node": "mocha system.js test",
-    "test:browser": "node builder.js && karma start"
+    "test:browser": "jspm bundle src/module dist/es5-module-bundle.js && karma start"
   },
   "devDependencies": {
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
     "eslint": "^0.23.0",
+    "jspm": "^0.16.0-beta.3",
     "karma": "^0.12.37",
     "karma-babel-preprocessor": "^5.2.1",
     "karma-browserify": "^4.2.1",
@@ -25,8 +26,18 @@
     "karma-mocha": "^0.2.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
-    "systemjs": "^0.18.4",
-    "systemjs-builder": "^0.12.2",
-    "system-css": "^0.2.2"
+    "systemjs": "^0.18.4"
+  },
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "clean-css": "npm:clean-css@^3.3.5",
+      "css": "github:systemjs/plugin-css@^0.1.13"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
   }
 }
