@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "src/module.js",
   "scripts": {
-    "prepublish": "npm run build:module",
+    "prepublish": "jspm install && npm run build:module",
     "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "build:module": "mkdirp dist && jspm bundle-sfx src/module dist/es5-module-standalone.js",
     "test:lint": "eslint src test",
