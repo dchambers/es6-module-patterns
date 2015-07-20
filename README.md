@@ -102,7 +102,7 @@ and secondly, we use a `jspm` section to re-point `main` back to the original ES
 		"main": "src/module.js"
 	},
 
-This is slightly beneficial since ES6 modules have [_live-bindings_](https://github.com/ModuleLoader/es6-module-loader/wiki/Circular-References-&-Bindings#es6-circular-references--bindings), so that when a module updates an exported value that update is immediately available within dependent modules. Additionally, in the future it's likely that people will stop transpiling ES6 code when running tests on native ES6 platforms, since un-transpiled code is easier to debug. Here again, by having access to the native ES6 source code, JSPM users will have the flexibility to consider doing that.
+This is slightly beneficial since ES6 modules have [_live-bindings_](https://github.com/ModuleLoader/es6-module-loader/wiki/Circular-References-&-Bindings#es6-circular-references--bindings), so that when a module updates an exported value that update is immediately available within dependent modules. Additionally, in the future it's likely that people will stop transpiling ES6 code when running tests on native ES6 platforms, since un-transpiled code is easier to debug. Here again, by having access to the native ES6 source code, JSPM users will more quickly have the flexibility to consider doing that.
 
 ## Multi-Asset ES5 Module
 
