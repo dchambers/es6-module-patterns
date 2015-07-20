@@ -13,6 +13,13 @@ describe('ES5 Module', function() {
 	});
 
 	it('does something', function() {
-		expect(multiAssetES5Module()).to.equal('<span class="multi-asset-es5-module">@Multi-Asset ES5 Module</span>');
+		expect(multiAssetES5Module()).to.equal(
+			'<div class="multi-asset-es5-module">\n' +
+				'  <div>@Multi-Asset ES5 Module</div>\n' +
+				'  <div>@ES5 Module</div>\n' +
+				'  <div>@ES6 Module</div>\n' +
+				'  <div>@Internal Dep</div>\n' +
+				'</div>\n'
+		);
 	});
 });

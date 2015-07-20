@@ -1,5 +1,5 @@
 {
-	"name": "es5-module",
+	"name": "@dchambers/es5-module",
 	"version": "0.0.0",
 	"description": "An ES5 Module.",
 	"author": "Dominic Chambers",

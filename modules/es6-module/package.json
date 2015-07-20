@@ -1,5 +1,5 @@
 {
-	"name": "es6-module",
+	"name": "@dchambers/es6-module",
 	"version": "0.0.0",
 	"description": "An ES6 Module.",
 	"author": "Dominic Chambers",

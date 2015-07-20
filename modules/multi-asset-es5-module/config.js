@@ -14,9 +14,11 @@ System.config({
 
 System.config({
   "map": {
-    "babel": "npm:babel-core@5.6.18",
-    "babel-runtime": "npm:babel-runtime@5.6.18",
-    "clean-css": "npm:clean-css@3.3.5",
+    "@dchambers/es5-module": "npm:@dchambers/es5-module@0.0.0",
+    "@dchambers/es6-module": "npm:@dchambers/es6-module@0.0.0",
+    "babel": "npm:babel-core@5.7.4",
+    "babel-runtime": "npm:babel-runtime@5.7.0",
+    "clean-css": "npm:clean-css@3.3.6",
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.13",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -66,7 +68,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.6.18": {
+    "npm:babel-runtime@5.7.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:buffer@3.3.1": {
@@ -74,7 +76,7 @@ System.config({
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
     },
-    "npm:clean-css@3.3.5": {
+    "npm:clean-css@3.3.6": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "commander": "npm:commander@2.8.1",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -83,7 +85,7 @@ System.config({
       "os": "github:jspm/nodelibs-os@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "source-map": "npm:source-map@0.4.3",
+      "source-map": "npm:source-map@0.4.4",
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -131,10 +133,8 @@ System.config({
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
     },
-    "npm:source-map@0.4.3": {
+    "npm:source-map@0.4.4": {
       "amdefine": "npm:amdefine@1.0.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:stream-browserify@1.0.0": {
