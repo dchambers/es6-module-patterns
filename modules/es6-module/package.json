@@ -1,13 +1,10 @@
 {
 	"name": "@dchambers/es6-module",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "An ES6 Module.",
 	"author": "Dominic Chambers",
 	"license": "MIT",
 	"main": "dist/module.js",
-	"jspm": {
-		"main": "src/module.js"
-	},
 	"scripts": {
 		"prepublish": "npm run build:es5 && npm run build:module",
 		"test": "npm run test:lint && npm run test:node && npm run test:browser",
