@@ -3,7 +3,7 @@
 require('./style.css!');
 
 var es5Module = require('@dchambers/es5-module');
-var es6Module = require('@dchambers/es6-module').default;
+var es6Module = require('@dchambers/es6-module');
 var internalDep = require('./dep.js');
 
 module.exports = function() {

@@ -15,7 +15,7 @@ System.config({
 System.config({
   "map": {
     "@dchambers/es5-module": "npm:@dchambers/es5-module@0.0.0",
-    "@dchambers/es6-module": "npm:@dchambers/es6-module@0.0.0",
+    "@dchambers/es6-module": "npm:@dchambers/es6-module@0.0.1",
     "babel": "npm:babel-core@5.7.4",
     "babel-runtime": "npm:babel-runtime@5.7.0",
     "clean-css": "npm:clean-css@3.3.6",
