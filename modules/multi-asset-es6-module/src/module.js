@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import style from './style.css!';
+import './style.css!';
 
 import es5Module from '@dchambers/es5-module';
 import es6Module from '@dchambers/es6-module';
