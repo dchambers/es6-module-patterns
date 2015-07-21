@@ -23,7 +23,6 @@
     "http-server": "~0.8.0",
     "jspm": "^0.16.0-beta.3",
     "karma": "^0.12.37",
-    "karma-babel-preprocessor": "^5.2.1",
     "karma-browserify": "^4.2.1",
     "karma-chrome-launcher": "^0.2.0",
     "karma-cli": "0.0.4",

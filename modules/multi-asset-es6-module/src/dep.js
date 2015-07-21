@@ -1,3 +1,3 @@
-export default {
-	class: 'multi-asset-es6-module'
-};
+export default function() {
+	return '@Internal Dep';
+}

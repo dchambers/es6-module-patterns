@@ -6,13 +6,15 @@
   "license": "MIT",
   "main": "src/module.js",
   "scripts": {
-    "prepublish": "npm run build:babel && npm run build:module",
+    "prepublish": "jspm install && npm run build:module",
     "test": "npm run test:lint && npm run test:node && npm run test:browser",
-    "build:babel": "mkdirp dist && browserify node_modules/babel/index.js -s babel -o dist/babel.js",
-    "build:module": "mkdirp dist && browserify src/module.js -t babelify -s es6module -o dist/es6-module-standalone.js",
+    "build:module": "mkdirp dist && jspm bundle-sfx src/standalone dist/es6-module-standalone.js",
     "test:lint": "eslint src test",
-    "test:node": "mocha --compilers js:babel/register node-system.js test",
-    "test:browser": "karma start"
+    "test:node": "mocha --compilers js:babel/register system.js test",
+    "test:browser": "mkdirp dist && jspm bundle src/module dist/es6-module-bundle.js && karma start",
+    "preworkbench": "npm run workbench:build",
+    "workbench": "http-server workbench & watch-run -p 'src/**' npm run workbench:build",
+    "workbench:build": "mkdirp dist/workbench && jspm bundle-sfx src/standalone workbench/dist/es6-module-standalone.js"
   },
   "devDependencies": {
     "babel": "^5.6.14",
@@ -20,6 +22,8 @@
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
     "eslint": "^0.23.0",
+    "http-server": "~0.8.0",
+    "jspm": "^0.16.0-beta.3",
     "karma": "^0.12.37",
     "karma-babel-preprocessor": "^5.2.1",
     "karma-browserify": "^4.2.1",
@@ -28,7 +32,21 @@
     "karma-mocha": "^0.2.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
-    "system-css": "^0.1.0",
-    "systemjs": "^0.18.4"
+    "systemjs": "^0.18.4",
+    "watch-run": "^1.2.2"
+  },
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "@dchambers/es5-module": "npm:@dchambers/es5-module@^0.0.0",
+      "@dchambers/es6-module": "npm:@dchambers/es6-module@^0.0.1",
+      "clean-css": "npm:clean-css@^3.3.5",
+      "css": "github:systemjs/plugin-css@^0.1.13"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
   }
 }

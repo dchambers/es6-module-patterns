@@ -14,9 +14,7 @@ module.exports = function(config) {
 		// list of files / patterns to load in the browser
 		files: [
 			'node_modules/systemjs/dist/system.src.js',
-			'browser-system.js',
-			'node_modules/system-css/css.js',
-			'src/**/*.js',
+			'dist/es6-module-bundle.js',
 			'test/**/*.js'
 		],
 
@@ -27,19 +25,7 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'node_modules/system-css/css.js': ['babel'],
-			'src/**/*.js': ['babel'],
 			'test/**/*.js': ['browserify']
-		},
-
-		babelPreprocessor: {
-			options: {
-				modules: 'system',
-				moduleIds: true,
-				getModuleId: function(moduleName) {
-					return moduleName.replace(/^.*\/multi-asset-es6-module\//, '') + '.js';
-				}
-			}
 		},
 
 		browserify: {
