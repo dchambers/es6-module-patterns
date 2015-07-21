@@ -14,13 +14,25 @@ System.config({
 
 System.config({
   "map": {
-    "@dchambers/es5-module": "npm:@dchambers/es5-module@0.0.0",
-    "@dchambers/es6-module": "npm:@dchambers/es6-module@0.0.1",
-    "babel": "npm:babel-core@5.7.4",
-    "babel-runtime": "npm:babel-runtime@5.7.0",
-    "clean-css": "npm:clean-css@3.3.6",
+    "@dchambers/es5-module": "node_modules/@dchambers/es5-module/src/module.js",
+    "@dchambers/es6-module": "node_modules/@dchambers/es6-module/dist/module.js",
+    "Xhttp": "github:jspm/nodelibs-http@1.7.1",
+    "babel": "node_modules/babel-core/index.js",
+    "babel-runtime": "node_modules/babel-runtime/index.js",
+    "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+    "clean-css": "node_modules/clean-css/index.js",
+    "commander": "npm:commander@2.8.1",
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.13",
+    "fs": "github:jspm/nodelibs-fs@0.1.2",
+    "http": "node_modules/http-browserify/index.js",
+    "https": "github:jspm/nodelibs-https@0.1.0",
+    "os": "github:jspm/nodelibs-os@0.1.0",
+    "path": "github:jspm/nodelibs-path@0.1.0",
+    "process": "github:jspm/nodelibs-process@0.1.1",
+    "source-map": "npm:source-map@0.4.4",
+    "url": "github:jspm/nodelibs-url@0.1.0",
+    "util": "github:jspm/nodelibs-util@0.1.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -58,6 +70,14 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "node_modules/http-browserify": {
+      "Base64": "npm:Base64@0.2.1",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.1",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "url": "github:jspm/nodelibs-url@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:amdefine@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",

@@ -16,7 +16,15 @@
     "workbench": "http-server workbench & watch-run -p 'src/**' npm run workbench:build",
     "workbench:build": "mkdirp dist/workbench && jspm bundle-sfx src/standalone workbench/dist/es5-module-standalone.js"
   },
+  "dependencies": {
+    "@dchambers/es5-module": "^0.0.0",
+    "@dchambers/es6-module": "^0.0.1",
+    "clean-css": "^3.3.5",
+    "http-browserify": "jspm/nodelibs-http#1.7.1"
+  },
   "devDependencies": {
+    "babel-core": "^5.1.13",
+    "babel-runtime": "^5.1.13",
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
     "eslint": "^0.23.0",
