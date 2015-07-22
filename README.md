@@ -34,8 +34,8 @@ Having the following features:
 
 The following client app types will be supported:
 
-  * JSPM Client App
   * NPM Client App
+  * JSPM Client App
 
 Having the following features:
 
@@ -106,16 +106,16 @@ This is slightly beneficial since ES6 modules have [_live-bindings_](https://git
 
 ## Multi-Asset ES5 Module
 
-To be written once this module type has become stable.
+Although the Multi-Asset ES5 Module is working, it currently relies on JSPM which precludes these modules from being consumed by the NPM Client App. I'm currently investigating a tool to make it possible to create this module type using NPM alone.
 
 ## Multi-Asset ES6 Module
 
-To be written once this module type has become stable.
-
-## JSPM Client App
-
-To be written once this app type has become stable.
+Although the Multi-Asset ES5 Module is working, it currently relies on JSPM which precludes these modules from being consumed by the NPM Client App. I'm currently investigating a tool to make it possible to create this module type using NPM alone.
 
 ## NPM Client App
 
-To be written once this app type has become stable.
+To be written once this app type is capable of consuming multi-asset modules.
+
+## JSPM Client App
+
+To be written once this app type has been created.
