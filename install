@@ -1,0 +1,11 @@
+#!/bin/bash
+
+green='\033[0;32m'
+noColor='\033[0m'
+
+for d in `ls {apps,modules}/* -d`; do
+  echo -e "\n\n${green}Installing '$d':${noColor}"
+  pushd $d
+  npm install
+  popd
+done
