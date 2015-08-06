@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dchambers/es6-module-patterns.png)](https://travis-ci.org/dchambers/es6-module-patterns)
+
 # Patterns for Modular ES6 Development
 
 ## Introduction
