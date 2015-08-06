@@ -10,7 +10,9 @@
     "build:module": "mkdirp dist && browserify src/app.js -t babelify -o dist/app.js",
     "test:lint": "eslint src test",
     "test:node": "mocha --compilers js:babel/register jsdom.js test",
+    "test:node:debug": "mocha --compilers js:babel/register jsdom.js test -w",
     "test:browser": "karma start",
+    "test:browser:debug": "karma start karma-debug.conf.js",
     "preserve": "npm run build:module",
     "serve": "http-server & watch-run -p 'src/**' npm run build:module"
   },

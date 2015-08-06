@@ -11,7 +11,9 @@
     "build:module": "mkdirp dist && jspm bundle-sfx src/standalone dist/es5-module-standalone.js",
     "test:lint": "eslint src test",
     "test:node": "mocha system.js test",
+    "test:node:debug": "mocha system.js test -w",
     "test:browser": "mkdirp dist && jspm bundle src/module dist/es5-module-bundle.js && karma start",
+    "test:browser:debug": "karma start karma-debug.conf.js",
     "preworkbench": "npm run workbench:build",
     "workbench": "http-server workbench & watch-run -p 'src/**' npm run workbench:build",
     "workbench:build": "mkdirp dist/workbench && jspm bundle-sfx src/standalone workbench/dist/es5-module-standalone.js"
