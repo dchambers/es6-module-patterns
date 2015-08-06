@@ -1,31 +1,32 @@
 {
-	"name": "@dchambers/es6-module",
-	"version": "0.0.1",
-	"description": "An ES6 Module.",
-	"author": "Dominic Chambers",
-	"license": "MIT",
-	"main": "dist/module.js",
-	"scripts": {
-		"prepublish": "npm run build:es5 && npm run build:module",
-		"test": "npm run test:lint && npm run test:node && npm run test:browser",
-		"build:es5": "mkdirp dist && babel src -d dist",
-		"build:module": "mkdirp dist && browserify src/module.js -s es5module -t babelify -o dist/es6-module-standalone.js",
-		"test:lint": "eslint src test",
-		"test:node": "mocha --compilers js:babel/register test",
-		"test:browser": "karma start"
-	},
-	"devDependencies": {
-		"babel": "^5.6.14",
-		"babelify": "^6.1.2",
-		"browserify": "^10.2.4",
-		"chai": "^3.0.0",
-		"eslint": "^0.23.0",
-		"karma": "^0.12.37",
-		"karma-browserify": "^4.2.1",
-		"karma-chrome-launcher": "^0.2.0",
-		"karma-cli": "0.0.4",
-		"karma-mocha": "^0.2.0",
-		"mkdirp": "^0.5.1",
-		"mocha": "^2.2.5"
-	}
+  "name": "@dchambers/es6-module",
+  "version": "0.0.1",
+  "description": "An ES6 Module.",
+  "author": "Dominic Chambers",
+  "license": "MIT",
+  "main": "dist/module.js",
+  "scripts": {
+    "prepublish": "npm run build:es5 && npm run build:module",
+    "test": "npm run test:lint && npm run test:node && npm run test:browser",
+    "build:es5": "mkdirp dist && babel src -d dist",
+    "build:module": "mkdirp dist && browserify src/module.js -s es5module -t babelify -o dist/es6-module-standalone.js",
+    "test:lint": "eslint src test",
+    "test:node": "mocha --compilers js:babel/register test",
+    "test:browser": "karma start"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "eslint": "^0.23.0",
+    "karma": "^0.12.37",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-mocha": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.2.5"
+  }
 }

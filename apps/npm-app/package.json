@@ -15,7 +15,7 @@
     "serve": "http-server & watch-run -p 'src/**' npm run build:module"
   },
   "dependencies": {
-		"@dchambers/es5-module": "^0.0.0",
+    "@dchambers/es5-module": "^0.0.0",
     "@dchambers/es6-module": "^0.0.1"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
     "karma-browserify": "^4.2.1",
     "karma-chrome-launcher": "^0.2.0",
     "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "^0.1.6",
     "karma-mocha": "^0.2.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
