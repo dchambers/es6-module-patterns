@@ -7,8 +7,8 @@
   "main": "src/module.js",
   "scripts": {
     "prepublish": "jspm install && npm run build:module",
-    "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "build:module": "mkdirp dist && jspm bundle-sfx src/standalone dist/es6-module-standalone.js",
+    "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "test:lint": "eslint src test",
     "test:node": "mocha --compilers js:babel/register system.js test",
     "test:node:debug": "mocha --compilers js:babel/register system.js test -w",

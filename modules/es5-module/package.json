@@ -7,8 +7,8 @@
   "main": "src/module.js",
   "scripts": {
     "prepublish": "npm run build:module",
-    "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "build:module": "mkdirp dist && browserify src/module.js -s es5module -o dist/es5-module-standalone.js",
+    "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "test:lint": "eslint src test",
     "test:node": "mocha test",
     "test:node:debug": "mocha test -w",

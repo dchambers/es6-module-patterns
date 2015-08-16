@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "prepublish": "npm run build:module",
-    "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "build:module": "mkdirp dist && browserify src/app.js -t babelify -o dist/app.js",
+    "test": "npm run test:lint && npm run test:node && npm run test:browser",
     "test:lint": "eslint src test",
     "test:node": "mocha --compilers js:babel/register jsdom.js test",
     "test:node:debug": "mocha --compilers js:babel/register jsdom.js test -w",
