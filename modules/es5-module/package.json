@@ -8,8 +8,9 @@
   "scripts": {
     "prepublish": "npm run build:module",
     "build:module": "mkdirp dist && browserify src/module.js -s es5module -o dist/es5-module-standalone.js",
-    "test": "npm run test:lint && npm run test:node && npm run test:browser",
-    "test:lint": "eslint src test",
+    "pretest": "npm run pretest:lint",
+    "pretest:lint": "eslint src test",
+    "test": "npm run test:node && npm run test:browser",
     "test:node": "mocha test",
     "test:node:debug": "mocha test -w",
     "test:browser": "karma start",
