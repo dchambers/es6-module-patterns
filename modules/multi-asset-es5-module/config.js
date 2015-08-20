@@ -1,19 +1,17 @@
 System.config({
-  "defaultJSExtensions": true,
-  "transpiler": "babel",
-  "babelOptions": {
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime"
     ]
   },
-  "paths": {
+  paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  }
-});
+  },
 
-System.config({
-  "map": {
+  map: {
     "@dchambers/es5-module": "npm:@dchambers/es5-module@0.0.0",
     "@dchambers/es6-module": "npm:@dchambers/es6-module@0.0.1",
     "babel": "npm:babel-core@5.7.4",
@@ -157,4 +155,3 @@ System.config({
     }
   }
 });
-
