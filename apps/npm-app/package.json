@@ -15,7 +15,7 @@
     "test:browser": "karma start",
     "test:browser:debug": "karma start karma-debug.conf.js",
     "preserve": "npm run build:module",
-    "serve": "http-server & watch-run -p 'src/**' npm run build:module"
+    "start": "http-server & watch-run -p 'src/**' npm run build:module"
   },
   "dependencies": {
     "@dchambers/es5-module": "^0.0.0",
