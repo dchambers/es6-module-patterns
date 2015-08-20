@@ -14,7 +14,7 @@
     "test:node:debug": "mocha --compilers js:babel/register jsdom.js test -w",
     "test:browser": "karma start",
     "test:browser:debug": "karma start karma-debug.conf.js",
-    "preserve": "npm run build:module",
+    "prestart": "npm run build:module",
     "start": "http-server & watch-run -p 'src/**' npm run build:module"
   },
   "dependencies": {

@@ -44,8 +44,8 @@ Having the following features:
   * It should be easy for app developers to assemble apps using a number of internally and externally developed components.
   * It should be possible for internally developed components to be hooked up directly, so that component changes are immediately visible in the app.
   * There should be some browser based integration tests that verify that everything works in the complete app.
-  * The app should be approachable;: `npm install` to install & `npm test` to test.
-  * There should be an `npm run serve` command that allows the app to be used during development.
+  * The app should be approachable; `npm install` to install & `npm test` to test.
+  * There should be an `npm start` command that allows the app to be used during development.
   * There should be an `npm run build` command that allows the app to be deployed.
 
 ## ES5 Module
