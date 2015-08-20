@@ -3,7 +3,7 @@
 green='\033[0;32m'
 noColor='\033[0m'
 
-for d in `ls {apps,modules}/* -d`; do
+for d in `ls -d {apps,modules}/*`; do
   echo -e "\n\n${green}Testing '$d':${noColor}"
   pushd $d
   npm test
